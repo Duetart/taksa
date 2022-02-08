@@ -1,0 +1,18 @@
+group 'ru.phts.kotlin.taksa.server'
+version '1.0-SNAPSHOT'
+
+application {
+    mainClass = "ru.phts.kotlin.taksa.server.ServerMainKt"
+}
+
+repositories {
+    mavenCentral()
+}
+def ktor_version = "1.6.7"
+dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.6.0'
+    implementation "io.ktor:ktor-server-core:$ktor_version"
+    implementation "io.ktor:ktor-server-netty:$ktor_version"
+    implementation 'ch.qos.logback:logback-classic:1.2.10'
+    implementation "io.ktor:ktor-auth:$ktor_version"
+}
